@@ -111,7 +111,8 @@ ul {
     background-color: var(--color-primary-green);
     border: 2px solid #465929;
     border-radius: 8px;
-    cursor: pointer
+    cursor: pointer;
+    padding: 16px 32px;
 }
 .button:hover {
     color: #465929;
@@ -119,11 +120,13 @@ ul {
 }
 .button:focus {
     color: #00ffff;
-    background-color: #0000ff;
 }
-.button:active {
-    color: #00ffff;
-    background-color: #0000ff;
+
+.button:disabled{
+    color: grey;
+    background-color: lightgrey;
+    border-color: currentcolor; /*наслудет цвет от color*/
+    cursor: not-allowed;
 }
 
 /* link */
@@ -377,6 +380,7 @@ ul {
 }
 .contact-title{
     margin-bottom: 16px;
+    font-size: 55px;
 }
 
 .contact-container{
@@ -498,6 +502,7 @@ ul {
     padding: 128px;
     background-color: var(--color-primary-light);
     border-radius: 32px;
+    overflow-y: auto;
 }
 .modal-btn-close{
     position: absolute;
@@ -505,7 +510,76 @@ ul {
     right: 40px;
 }
 
+/* Form */
+.form-field{
+    margin-bottom: 32px;
+}
+.form-label{
+    display: block;
+}
+.form-input{
+    padding: 16px 42px;
+    width: 100%;
+    border: 2px solid #a28268;
+    border-radius: 8px;
+    background-color: transparent;
+}
+.form-input:focus{
+    border-color: var(--color-primary-green);
+    outline: none;
+}
 
+.form-input::placeholder{
+    color: #A28268;
+    font-size: 16px;
+    line-height: 1.17;
+}
+.form-input:focus::placeholder{
+    color: var(--color-primary-two);
+}
+.form-button{
+    display: block;
+    margin: 0 auto 24px;
+}
+.form-terms{
+    color: var(--color-primary-two);
+    margin: 0 auto;
+    max-width: 220px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+}
+.form-terms-link{
+    color: var(--color-primary-two);
+    text-underline-offset: 2px;
+}
+
+        /* -----свой стиль для чекбокса------ */
+/* .checkbox{
+    position: relative;
+}
+.checkbox-input{
+    appearance: none;
+}
+.checkbox-input:checked + .checkbox-label::before{
+    background-color: green;
+}
+.checkbox-label{
+    padding-left: 24px;
+    cursor: pointer;
+}
+.checkbox-label::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    margin-top: 5px;
+    border: 1px solid var(--color-primary-two);
+    border-radius: 2px;
+    content: '';
+} */
 
 
 
