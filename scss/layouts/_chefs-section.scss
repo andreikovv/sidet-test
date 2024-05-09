@@ -1,0 +1,48 @@
+.chefs-section{
+
+    &__title {
+        position: relative;
+        margin: 0 auto 80px;
+
+        &::before,
+        &::after {
+            position: absolute;
+            bottom: 24px;
+            width: 352px;
+            border: 2px solid #CFCFBC;
+            content: '';
+        }
+        
+        &::before {
+            left: 0;
+        }
+        
+        &::after {
+            right: 0;
+        }
+    }
+
+    /* так же эту линию можно через */
+    /*  .chefs-title::before,
+        .chefs-title::after {
+            display: flex;
+            width: 352px;
+            height: 2px;
+            background-color: #CFCFBC;
+            content: '';
+    } */
+
+    &__list {
+        display: flex;
+        gap: 40px 30px;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        flex-basis: calc((100% - 30px) / 2);
+    }
+
+}
+
+
+

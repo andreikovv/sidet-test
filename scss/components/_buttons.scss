@@ -1,0 +1,25 @@
+.button {
+    color: var(--color-primary-light);
+    background-color: var(--color-primary-green);
+    border: 2px solid #465929;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 16px 32px;
+}
+
+.button:hover {
+    color: #465929;
+    background-color: transparent;
+}
+
+.button:focus {
+    color: #00ffff;
+}
+
+.button:disabled {
+    color: grey;
+    background-color: lightgrey;
+    border-color: currentcolor;
+    /*наслудет цвет от color*/
+    cursor: not-allowed;
+}
